@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #fce4ec;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #d32f2f;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .yes-btn {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .no-btn {
+            background-color: #d32f2f;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            position: absolute;
+        }
+        .cute-img {
+            width: 100px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Will you be my Valentine?</h1>
+    <div class="buttons">
+        <button class="yes-btn" onclick="alert('Yay! ❤️')">Yes</button>
+        <button class="no-btn" onmouseover="moveButton()">Really sure??</button>
+    </div>
+    <img src="https://i.imgur.com/Q7w5LGB.png" class="cute-img" alt="Cute Blob">
+
+    <script>
+        function moveButton() {
+            let x = Math.random() * window.innerWidth - 100;
+            let y = Math.random() * window.innerHeight - 50;
+            document.querySelector('.no-btn').style.left = ${x}px;
+            document.querySelector('.no-btn').style.top = ${y}px;
+        }
+    </script>
+</body>
+</html>
